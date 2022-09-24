@@ -1,6 +1,6 @@
 package numbersTest.java;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 	public static void main (String[] args) {
@@ -14,8 +14,9 @@ public class Main {
 		
 		System.out.println("Enter your End number must be greater than start Number:\n");
 		eNumber = in.nextInt();
+		ArrayList<Integer>  eveList = new ArrayList<Integer>();
+		ArrayList<Integer>  oddList = new ArrayList<Integer>();
 		
-	
 		for(int i = sNumber;i<=eNumber;i++)
 		{
 		System.out.println(i + ", ");
@@ -24,9 +25,13 @@ public class Main {
 		if(i%2 == 0)
 		{
 			eveLen++;
+			eveList.add(i);
+			
 		}
 		else {
 			oddLen++;
+			oddList.add(i);
+			
 		}
 		
 		}
@@ -34,6 +39,8 @@ public class Main {
 		System.out.println("\nNumbers between start to end is:" + len );
 		System.out.println("\nNumber of even numbers is :" + eveLen );
 		System.out.println("\nNumber of odd numbers is :" + oddLen );
+		System.out.println("\nEven Numbers :" + eveList );
+		System.out.println("\nODD Numbers :" + oddList );
 	}
 
 }
